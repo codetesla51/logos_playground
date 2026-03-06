@@ -7,6 +7,7 @@ import (
 	"net"
 	"net/http"
 	"os"
+	"sync"
 	"time"
 
 	"github.com/codetesla51/limitz/algorithms"
@@ -76,7 +77,9 @@ func runHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "invalid request", http.StatusBadRequest)
 		return
 	}
-
+	var mu sync.Mutex
+	mu.Lock()
+	defer mu.Unlock()
 	// capture stdout
 	old := os.Stdout
 	pr, pw, _ := os.Pipe()
@@ -96,6 +99,7 @@ func runHandler(w http.ResponseWriter, r *http.Request) {
 	done := make(chan result, 1)
 
 	go func() {
+
 		done <- result{err: vm.Run(body.Source)}
 	}()
 
@@ -116,7 +120,6 @@ func runHandler(w http.ResponseWriter, r *http.Request) {
 		os.Stdout = old
 		resp.Error = "execution timed out"
 	}
-
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(resp)
 }
