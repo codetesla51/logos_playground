@@ -15,6 +15,7 @@ import (
 	"github.com/codetesla51/logos/logos"
 )
 
+var mu sync.Mutex
 type codeBody struct {
 	Source string `json:"source"`
 }
@@ -77,7 +78,7 @@ func runHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "invalid request", http.StatusBadRequest)
 		return
 	}
-	var mu sync.Mutex
+	
 	mu.Lock()
 	defer mu.Unlock()
 	// capture stdout
