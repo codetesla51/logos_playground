@@ -10,6 +10,8 @@ github.com/codetesla51/limitz v1.0.0 h1:QS3Wc9LXh8YweBH5llfiQ6bN/eLu8V2BybC9N31O
 github.com/codetesla51/limitz v1.0.0/go.mod h1:CQq+vduff2qA6qDKgEriwpJ2V4qeFwb99OLisVikB4Q=
 github.com/codetesla51/logos v0.1.1 h1:S6BQCogQxSU99bluhTSfAoCBmrtk1YA5h520vUmunLg=
 github.com/codetesla51/logos v0.1.1/go.mod h1:BmoNb/pkLtihgIN0al854k4HBsxJeNteBJn3+vbE4FY=
+github.com/codetesla51/logos v0.2.0 h1:X5DH8IvqxuGlHdyY1bszENGGt7FqZTgRoqVBwmwmpis=
+github.com/codetesla51/logos v0.2.0/go.mod h1:BmoNb/pkLtihgIN0al854k4HBsxJeNteBJn3+vbE4FY=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
