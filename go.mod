@@ -4,7 +4,7 @@ go 1.25.6
 
 require (
 	github.com/codetesla51/limitz v1.0.0
-	github.com/codetesla51/logos v0.4.0
+	github.com/codetesla51/logos v0.4.5
 )
 
 require (
